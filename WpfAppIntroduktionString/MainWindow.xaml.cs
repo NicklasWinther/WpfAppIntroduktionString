@@ -42,5 +42,12 @@ namespace WpfAppIntroduktionString
             textBoxRight.Clear();
             textBoxRight.Text = "Antal tegn: " + classBIZ.CountAllChars(textBoxLeft);
         }
+
+        //Opgave 3
+        private void Opgave3_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxRight.Clear();
+            textBoxRight.Text = "Antal vokaler: " + classBIZ.CountAllVokals(textBoxLeft);
+        }
     }
 }

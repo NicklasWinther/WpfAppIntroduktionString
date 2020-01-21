@@ -40,5 +40,56 @@ namespace WpfAppIntroduktionString.BIZ
         {
             return textBox.Text.Length;
         }
+
+        //Opgave 3
+        public int CountAllVokals(TextBox textBox)
+        {
+            int counter = 0;
+            foreach (char c in textBox.Text.ToLower())
+            {
+                switch (c)
+                {
+                    case 'a':
+                        counter++;
+                            break;
+
+                    case 'e':
+                        counter++;
+                        break;
+
+                    case 'i':
+                        counter++;
+                        break;
+
+                    case 'o':
+                        counter++;
+                        break;
+
+                    case 'u':
+                        counter++;
+                        break;
+
+                    case 'y':
+                        counter++;
+                        break;
+
+                    case 'æ':
+                        counter++;
+                        break;
+
+                    case 'ø':
+                        counter++;
+                        break;
+
+                    case 'å':
+                        counter++;
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            return counter;
+        }
     }
 }
