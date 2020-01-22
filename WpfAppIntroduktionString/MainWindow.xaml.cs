@@ -63,5 +63,12 @@ namespace WpfAppIntroduktionString
             textBoxRight.Clear();
             textBoxRight.Text = classBIZ.MarkAndCountWord(textBoxLeft, textBoxBottom.Text);
         }
+
+        //Opgave 6
+        private void Opgave6_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxRight.Clear();
+            textBoxRight.Text = classBIZ.CountNumberOfWordLength(textBoxLeft);
+        }
     }
 }

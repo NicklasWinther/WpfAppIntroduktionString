@@ -116,5 +116,38 @@ namespace WpfAppIntroduktionString.BIZ
 
             return $"Ordet {searchString} blev fundet {counter} gang(e) og er blevet markeret med #>\n\n{text}";
         }
+
+        //Opgave 6
+        public string CountNumberOfWordLength(TextBox textBox)
+        {
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+            string text = textBox.Text;
+            string result = "";
+
+            string[] words = text.Split(' ');
+
+            foreach (string word in words)
+            {
+                if (dictionary.TryGetValue(word.Length, out int value))
+                {
+                    value++;
+                    dictionary[word.Length] = value;
+                }
+                else
+                {
+                    dictionary.Add(word.Length, 1);
+                }
+            }
+
+            List<int> keys = dictionary.Keys.ToList();
+            keys.Sort();
+
+            foreach (int key in keys)
+            {
+                result = result + $"Ord med længden {key}: {dictionary[key]} stk\n";
+            }
+
+            return result;
+        }
     }
 }

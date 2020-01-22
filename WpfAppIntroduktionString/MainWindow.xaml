@@ -79,7 +79,8 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Height="45"
-                Width="150" />
+                Width="150"
+                Click="Opgave6_Click" />
         <Button Grid.Row="10"
                 Grid.Column="2"
                 x:Name="Opgave7"
