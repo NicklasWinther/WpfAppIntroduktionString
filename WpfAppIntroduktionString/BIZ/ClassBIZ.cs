@@ -93,7 +93,6 @@ namespace WpfAppIntroduktionString.BIZ
             return counter;
         }
 
-
         //Opgave 4
         public string RemoveAllVokals(TextBox textBox)
         {
@@ -149,5 +148,37 @@ namespace WpfAppIntroduktionString.BIZ
 
             return result;
         }
+
+        //Opgave 7
+        public  string CountNumberOfWordAppearance(TextBox textBox)
+        {
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            string[] words = textBox.Text.Split().Select(x => x.TrimEnd(",.;:-".ToCharArray())).ToArray();
+            string result = "";
+
+            foreach (string word in words)
+            {
+                if (dictionary.TryGetValue(word, out int value))
+                {
+                    value++;
+                    dictionary[word] = value;
+                }
+                else
+                {
+                    dictionary.Add(word, 1);
+                }
+            }
+
+            List<string> dictionaryWords = dictionary.Keys.ToList();
+            dictionaryWords.Sort();
+
+            foreach (string dictionaryWord in dictionaryWords)
+            {
+                result = result + $"Ordet >> {dictionaryWord} << forekommer : {dictionary[dictionaryWord]} gang(e)\n";
+            }
+
+            return result;
+        }
+
     }
 }

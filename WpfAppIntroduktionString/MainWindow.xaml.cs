@@ -70,5 +70,12 @@ namespace WpfAppIntroduktionString
             textBoxRight.Clear();
             textBoxRight.Text = classBIZ.CountNumberOfWordLength(textBoxLeft);
         }
+
+        //Opgave 7
+        private void Opgave7_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxRight.Clear();
+            textBoxRight.Text = classBIZ.CountNumberOfWordAppearance(textBoxLeft);
+        }
     }
 }
