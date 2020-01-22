@@ -49,5 +49,12 @@ namespace WpfAppIntroduktionString
             textBoxRight.Clear();
             textBoxRight.Text = "Antal vokaler: " + classBIZ.CountAllVokals(textBoxLeft);
         }
+
+        //Opgave 4
+        private void Opgave4_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxRight.Clear();
+            textBoxRight.Text = classBIZ.RemoveAllVokals(textBoxLeft);
+        }
     }
 }

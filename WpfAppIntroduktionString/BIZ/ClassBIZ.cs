@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using WpfAppIntroduktionString.IO;
@@ -90,6 +91,12 @@ namespace WpfAppIntroduktionString.BIZ
                 }
             }
             return counter;
+        }
+
+        //Opgave 4
+        public string RemoveAllVokals(TextBox textBox)
+        {
+            return Regex.Replace(textBox.Text, "[aeiouyæøå]", "");
         }
     }
 }
