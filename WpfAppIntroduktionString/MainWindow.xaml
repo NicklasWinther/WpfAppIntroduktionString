@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WpfAppIntroduktionString"
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="1200">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -97,7 +98,8 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Height="45"
-                Width="150"/>
+                Width="150"
+                Click="Opgave8_Click" />
         <TextBox Grid.Row="0"
                  Grid.RowSpan="9"
                  Grid.Column="0"
