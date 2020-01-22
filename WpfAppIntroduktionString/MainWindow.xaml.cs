@@ -56,5 +56,12 @@ namespace WpfAppIntroduktionString
             textBoxRight.Clear();
             textBoxRight.Text = classBIZ.RemoveAllVokals(textBoxLeft);
         }
+
+        //Opgave 5
+        private void Opgave5_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxRight.Clear();
+            textBoxRight.Text = classBIZ.MarkAndCountWord(textBoxLeft, textBoxBottom.Text);
+        }
     }
 }

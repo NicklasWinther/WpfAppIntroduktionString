@@ -93,10 +93,28 @@ namespace WpfAppIntroduktionString.BIZ
             return counter;
         }
 
+
         //Opgave 4
         public string RemoveAllVokals(TextBox textBox)
         {
             return Regex.Replace(textBox.Text, "[aeiouyæøå]", "");
+        }
+
+        //Opgave 5
+        public string MarkAndCountWord(TextBox textBox, string searchString)
+        {
+            int counter = 0;
+            string text = textBox.Text;
+            int index = text.IndexOf(searchString);
+            while(index != -1)
+            {
+                text = text.Insert(index, "#>");
+                counter++;
+                index = text.IndexOf(searchString, index + 3);
+            }
+
+
+            return $"Ordet {searchString} blev fundet {counter} gang(e) og er blevet markeret med #>\n\n{text}";
         }
     }
 }
